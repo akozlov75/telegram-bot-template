@@ -1,0 +1,51 @@
+{
+  "name": "telegram-bot-template",
+  "version": "1.0.0",
+  "description": "Template to create telegram bots",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:akozlov75/telegram-bot-template.git"
+  },
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "lint:code": "eslint . --ext .ts",
+    "lint:markdown": "markdownlint '**/*.md' --ignore node_modules --ignore *.json",
+    "lint": "npm run lint:markdown && npm run lint:code",
+    "start": "ts-node ./src/index.ts",
+    "test": "echo 'Not implemented'",
+    "watch": "nodemon -x 'npm run start' -e ts -w src"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "template",
+    "nodejs",
+    "docker"
+  ],
+  "author": "Alex 'goslow' Kozlov <akozlov75@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "node-fetch": "^2.6.7",
+    "telegraf": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.25",
+    "@types/node-fetch": "^2.6.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.2.7",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "markdownlint-cli": "^0.31.1",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
